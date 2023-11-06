@@ -1,0 +1,617 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+:root {
+  --body-color: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  --body-font: "Montserrat", sans-serif;
+  --heading-fonts: "Poppins", sans-serif;
+  --font-regular: 400;
+  --font-semi-bold: 600;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-fonts);
+  font-weight: var(--font-semi-bold);
+}
+body {
+  font-family: var(--body-font);
+  background: var(--body-color);
+}
+
+/* Custom navbar styles */
+.custom-navbar {
+  background-color: rgba(0, 0, 0, 0.9);
+  /* position: fixed; Fixed position at the top */
+  width: 100%; /* Full-width navbar */
+  z-index: 1000; /* Adjust z-index as needed */
+  padding: 15px 0; /* Add padding top and bottom */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Style the navbar brand/logo */
+.custom-navbar .navbar-brand {
+  margin-right: 20px; /* Add margin to separate logo from links */
+  color: #ffffff; /* Navbar brand text color */
+  font-size: 24px; /* Adjust font size as needed */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Style the navigation links */
+.custom-navbar .navbar-nav .nav-link {
+  color: #ffffff; /* Navigation link text color */
+  font-size: 18px; /* Adjust font size as needed */
+  margin-right: 15px; /* Add margin between links */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Style the navigation links on hover */
+.custom-navbar .navbar-nav .nav-link:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Style the toggler button icon */
+.custom-navbar .navbar-toggler {
+  background-color: #ffffff; /* Toggler button color */
+}
+.navbar i {
+  font-size: 24px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+i.rl {
+  color: #007bff;
+}
+
+.check-icon {
+  color: #007bff;
+  font-size: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+li {
+  list-style: none;
+}
+
+/* Styling the bx icons */
+.navbar-nav .bx {
+  font-size: 24px;
+  margin-right: 8px;
+  color: #007bff;
+  vertical-align: middle;
+}
+
+i.bx:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
+}
+/* Hero Section */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.hero-video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Hero Overlay Centering */
+.hero-content {
+  text-align: center; /* Center text within the overlay */
+  color: #fff;
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 70px 0px;
+  z-index: 1;
+}
+
+/* Style H2 */
+.hero-content h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Style P */
+.hero-content p {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+.hero-details h3 {
+  font-weight: 600;
+}
+.hero-details ul {
+  list-style: none;
+}
+.hero-details li {
+  font-weight: 600;
+}
+.hero-details i {
+  color: #007bff;
+}
+/* Style A (Button) */
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+  margin: 3px;
+}
+
+/* Style Hero Details */
+.hero-details {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  text-align: left;
+  z-index: 1;
+}
+/* Feature Card Styles */
+#con {
+  color: #fff;
+}
+.feature-card {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.feature-card:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* Add translateY transform for hover effect */
+}
+
+.feature-card i {
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.feature-card h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Override Bootstrap container padding */
+.container {
+  padding: 0;
+}
+
+/* Additional Styles for Improved UI/UX */
+.features-section {
+  padding: 60px 0;
+}
+
+.section-content h2 {
+  color: #333;
+}
+
+.service {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.card:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.card:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.card:nth-child(6) {
+  animation-delay: 1.2s;
+}
+
+.card:nth-child(7) {
+  animation-delay: 1.4s;
+}
+
+.card:nth-child(8) {
+  animation-delay: 1.6s;
+}
+
+.card:nth-child(9) {
+  animation-delay: 1.8s;
+}
+
+.card:nth-child(10) {
+  animation-delay: 2s;
+}
+
+.service i {
+  font-size: 2.5rem;
+  color: #007bff; /* Blue color for icons */
+  display: block;
+  margin-bottom: 10px;
+}
+.card {
+  transition: transform 0.2s, box-shadow 0.2s; /* Add smooth transitions for hover effects */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Scale up on hover */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+}
+
+.card i {
+  color: #007bff; /* Change card title color */
+}
+/* Center-align the icons within the cards */
+.card-body i {
+  display: block;
+  margin: 2px;
+  text-align: center;
+  font-size: 2rem; /* Adjust the font size as needed */
+}
+.card-title {
+  text-align: center;
+}
+.card-text {
+  color: #333; /* Change card text color */
+}
+.testimonials-section {
+  padding: 50px 0;
+}
+.testimonials-section h2 {
+  color: #4194ec;
+}
+
+.testimonial {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px;
+}
+/* Add a smoother hover effect to the Testimonial Card */
+.testimonial:hover {
+  transform: scale(1.03); /* Slightly scale up the card on hover */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+  background-color: #f8f8f8; /* Change background color on hover */
+}
+
+.testimonial-avatar img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  border: 3px solid #007bff;
+}
+
+.testimonial-text {
+  margin-left: 15px;
+}
+
+#testimonial-author {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.testimonial-text p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-family: var(--body-font);
+  font-weight: 400;
+}
+/* Center align the testimonial avatars */
+.testimonial-avatar {
+  text-align: center;
+}
+
+.testimonial-avatar img {
+  display: inline-block;
+}
+
+/* Contact Section Styling */
+.contact-section {
+  padding: 80px 0;
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2,
+.contact-info h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-form p,
+.contact-info ul {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.contact-info ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.contact-info ul li {
+  margin-bottom: 10px;
+}
+
+/* Form Input Styles */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Submit Button Style */
+.contact-form .cta-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form .cta-btn:hover {
+  background-color: #0056b3;
+}
+
+textarea {
+  resize: none;
+}
+
+/* Style the form inputs and textarea */
+.form-control {
+  border: 1px solid #ced4da; /* Input border color */
+  border-radius: 5px;
+}
+
+/* Add some spacing between form elements */
+.form-group {
+  margin-bottom: 20px;
+}
+/* Custom styles for the footer */
+.footer {
+  color: #ffffff; /* Footer text color */
+  padding: 20px 0;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+/* Style the social icons */
+.footer-social a {
+  color: #ffffff; /* Social icon color */
+  margin: 0 10px;
+  font-size: 24px;
+}
+
+/* Apply the scaling animation to the social icons on hover */
+.footer-social a:hover i {
+  animation: socialIconScale 0.3s ease infinite;
+}
+/* Scroll to Top Button Styles */
+#scrollTopButton {
+  display: flex;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+#scrollTopButton:hover {
+  background-color: #0056b3;
+  opacity: 0.9;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+  .contact-form,
+  .contact-info {
+    margin-bottom: 30px;
+  }
+  .feature-card {
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  .feature-card i {
+    font-size: 1.5rem;
+  }
+
+  .feature-card h4 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+
+  .feature-card p {
+    font-size: 0.9rem;
+  }
+  .hero-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  /* Style P for smaller screens */
+  .hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  .about-text h3 {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
+/* Styles for screens with a width between 768px and 984px */
+@media (min-width: 768px) and (max-width: 984px) {
+  .col-md-6 h2,
+  .cta-button,
+  p {
+    font-size: 18px;
+  }
+  .feature-card {
+    width: 100%;
+  }
+  .feature-card p {
+    font-size: 15px;
+  }
+  .feature-card h4 {
+    font-size: 18px;
+  }
+  .testimonial {
+    width: 90%;
+  }
+  .testimonial-text p {
+    font-size: 16px;
+  }
+  .col-lg-6 {
+    margin: 5px;
+  }
+  .about-images img {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+/* Define a keyframe animation for the scaling effect */
+@keyframes socialIconScale {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2); /* Scale up by 20% at 50% of the animation */
+  }
+}
+
+.section-hero {
+  padding: 6em 0;
+  position: relative;
+  color: #fff;
+}
+.hero {
+  padding: 8em 0;
+  background: #6927ff;
+  border-radius: 350px 350px 350px 350px;
+}
+.heading-section .subheading {
+  font-size: 14px;
+  font-size: 500;
+  display: block;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.heading-section.heading-section-white .subheading {
+  color: rgba(255, 255, 255, 0.9);
+}
+.block-18 .icon > span {
+  font-size: 40px;
+}
+
+.block-18 .text strong {
+  font-size: 30px;
+}
+
+.block-18 .text span {
+  display: block;
+}
+.text-center {
+  text-align: center !important;
+}
+@media (max-width: 767.98px) {
+  .ftco-counter .counter-wrap {
+    margin-bottom: 20px;
+  }
+}

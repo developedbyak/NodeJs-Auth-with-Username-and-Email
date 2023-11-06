@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-image: url(/image/nick-chong-N__BnvQ_w18-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.bx {
+  color: #fff;
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+label {
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 1px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+nav a {
+  text-decoration: none;
+}
+.fa-bars {
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.fa-bars:hover {
+  color: black;
+}
+
+.menu a {
+  color: #fff;
+  letter-spacing: 0.1rem;
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s linear;
+}
+
+.menu a:hover {
+  color: #e94949;
+  padding-left: 1.5rem;
+}
+
+.menu {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.show-menu {
+  height: 12rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.btn {
+  background-color: pink;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  color: black;
+  position: relative;
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+.btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  background-color: orangered;
+  width: 0;
+  height: 0;
+  left: var(--xPos);
+  top: var(--yPos);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: width 0.5s, height 0.5s;
+}
+
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.slider {
+  width: 90%;
+  margin: auto;
+  background-color: transparent;
+  padding: 20px;
+  color: #fff;
+}
+
+.crypto-slide {
+  text-align: center;
+}
+
+.crypto-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.crypto-card {
+  flex: 0 1 calc(33.3333% - 20px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.crypto-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.crypto-logo {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.crypto-name {
+  font-weight: bold;
+  font-weight: bold;
+}
+
+.crypto-price {
+  color: #008000;
+  font-weight: bold;
+}
+
+.crypto-change {
+  color: #ff0000;
+  font-weight: bold;
+}
+@media (min-width: 800px) {
+  .nav-main {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .nav-header {
+    padding: 0;
+  }
+  .fa-bars {
+    display: none !important;
+  }
+
+  .menu {
+    height: auto;
+    display: flex;
+  }
+  .menu a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+  .menu a:hover {
+    padding: 0;
+    background: transparent;
+  }
+}
+@media (max-width: 768px) {
+  .crypto-card {
+    flex: 0 1 calc(50% - 20px);
+  }
+  .heading {
+    margin: 10px;
+  }
+}

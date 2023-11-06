@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet" href="/css/form.css" />
+  <style>
+    .login {
+      padding: 20px;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      min-height: 400px;
+    }
+
+    .login h1 {
+      text-align: center;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container control-center">
+    <div class="row">
+      <div class="col-md-6 right-side">
+        <div class="toggle">
+          <div class="panel">
+            <h1>Hello, Friend!</h1>
+            <p>
+              Register with your personal details to use all of site features
+            </p>
+            <a href="/register" class="btn text-white">Sign Up</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 form-control-center">
+        <form class="login" action="/login" method="POST">
+          <h1>Login</h1>
+          <% if (messages.error) { %>
+            <div class="alert alert-primary" role="alert">
+              <strong>
+                <%= messages.error %>
+              </strong>
+            </div>
+            <% } %>
+              <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="Email" name="email" />
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" id="password" placeholder="Password" name="password" />
+              </div>
+              <a href="#">Forget Your Password?</a>
+              <button type="submit" class="btn text-white">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

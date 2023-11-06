@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>User Page</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/css/home.css" />
+    <meta name="robots" content="noindex, follow" />
+    <style>
+      .active-item {
+        background-color: #007bff; /* Change the background color to your preferred active style */
+        color: #fff; /* Change the text color to your preferred active style */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper d-flex align-items-stretch">
+      <nav id="sidebar">
+        <div class="custom-menu">
+          <button
+            type="button"
+            id="sidebarCollapse"
+            class="btn btn-primary"
+          ></button>
+        </div>
+        <div
+          class="img bg-wrap text-center py-4"
+          style="
+            background-image: url(https://images.unsplash.com/photo-1627253781598-63b98c51da42?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTk1fHxjcnlwdG98ZW58MHx8MHx8fDA%3D);
+          "
+        >
+          <div class="user-logo">
+            <div class="img">
+              <img
+                src="<%= user.profileImage || '/default-image.jpg' %>"
+                alt="Profile Image"
+              />
+            </div>
+            <h3><%= user.name %></h3>
+          </div>
+        </div>
+
+        <ul class="list-unstyled components mb-5">
+          <li class="active-item" data-section="home">
+            <a href="#"><span class="fa fa-home mr-3"></span> Home</a>
+          </li>
+
+          <li data-section="dashboard">
+            <a href="#"><span class="fa fa-dashboard mr-3"></span> Dashboard</a>
+          </li>
+          <li data-section="invest">
+            <a href="#"
+              ><span class="fa fa-exchange mr-3 notif"
+                ><small class="d-flex align-items-center justify-content-center"
+                  >5</small
+                ></span
+              >
+              Invest</a
+            >
+          </li>
+          <li data-section="news">
+            <a href="#"><span class="fa fa-bullhorn mr-3"></span>News</a>
+          </li>
+          <li data-section="settings">
+            <a href="#"><span class="fa fa-cog mr-3"></span> Settings</a>
+          </li>
+          <li data-section="support">
+            <a href="#"><span class="fa fa-support mr-3"></span> Support</a>
+          </li>
+          <li data-section="signout">
+            <form method="post" action="/logout">
+              <button type="submit">
+                <span class="fa fa-sign-out mr-3"></span> Sign Out
+              </button>
+            </form>
+          </li>
+        </ul>
+      </nav>
+
+      <div id="content" class="p-4 p-md-5 pt-5">
+        <section id="home">
+          <h2>Welcome to Your User Page</h2>
+          <p>
+            This is your personalized user page. You have access to various
+            features and options:
+          </p>
+          <p>This is some additional content for the Home section.</p>
+          <p>More content goes here...</p>
+        </section>
+
+        <section id="dashboard" style="display: none">
+          <h2>Dashboard</h2>
+          <p>
+            Here, you can get an overview of your activities and see various
+            statistics and data.
+          </p>
+          <p>More content for the Dashboard section...</p>
+        </section>
+
+        <section id="invest" style="display: none">
+          <h2>Investments</h2>
+          <p>
+            Manage your investments and financial transactions in this section.
+          </p>
+          <p>Additional content for the Invest section...</p>
+        </section>
+
+        <!-- Repeat the same structure for other sections -->
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        // Event listener for menu items
+        $("li[data-section]").click(function () {
+          // Remove the active class from all items
+          $("li[data-section]").removeClass("active-item");
+
+          // Add the active class to the clicked item
+          $(this).addClass("active-item");
+
+          // Get the section name from the data-section attribute
+          var sectionName = $(this).data("section");
+
+          // Hide all sections except the one corresponding to the clicked menu item
+          $("section")
+            .not("#" + sectionName)
+            .hide();
+          $("#" + sectionName).show();
+        });
+      });
+    </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

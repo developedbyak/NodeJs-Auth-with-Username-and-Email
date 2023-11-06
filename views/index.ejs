@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Add Bootstrap CSS link here -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <title>Cryptocurrency</title>
+  <style>
+    .navbar-collapse {
+      justify-content: flex-end;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container">
+      <!-- Brand/logo -->
+      <a class="navbar-brand animate__animated animate__bounceInDown" href="#"><i
+          class="bx bxs-coin-stack"></i>Cryptocurrency</a>
+
+      <!-- Toggler button for mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation links and dropdowns -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link scrollspy-link scroll-to-section" href="/">Home</a>
+          </li>
+          <!-- First dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown1" data-bs-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              Analytics
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdown1">
+              <a class="dropdown-item" href="#overview"><i class="ri-pie-chart-line rl"></i> Overview</a>
+              <a class="dropdown-item" href="#"><i class="ri-arrow-up-down-line rl"></i> Transactions</a>
+
+              <a class="dropdown-item" href="#reports"><i class="ri-bar-chart-line rl"></i> Reports</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"><i class="ri-file-list-line rl"></i> Documents</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"><i class="ri-cash-line rl"></i> Payments</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"><i class="ri-refund-2-line rl"></i> Refunds</a>
+            </div>
+          </li>
+
+          <!-- Second dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown2" data-bs-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              Get Started
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdown2">
+              <a class="dropdown-item" href="/register"><i class="bx bxs-user-plus"></i>Register</a>
+              <a class="dropdown-item" href="/login"><i class="bx bxs-user-pin bx-tada"></i>Login</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link scroll-to-section" href="/features">Features</a>
+          </li>
+
+          <!-- Additional links -->
+          <li class="nav-item">
+            <a class="nav-link scroll-to-section" href="/about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link scroll-to-section" href="#service">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link scroll-to-section" href="#contacts">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="hero-section" data-section="home">
+    <video autoplay loop muted class="hero-video">
+      <source src="/video/video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>Welcome to Cryptocurrency</h2>
+            <p>Your Gateway to the World of Digital Finance</p>
+            <a href="./register.ejs" class="btn btn-primary btn-lg cta-button">Get Started</a>
+          </div>
+          <div class="col-md-6">
+            <div class="hero-details">
+              <h3>Why Choose Us?</h3>
+              <ul>
+                <li><i class="bx bx-check"></i> Secure and Trusted</li>
+                <li><i class="bx bx-check"></i> Experienced Team</li>
+                <li><i class="bx bx-check"></i> Cutting-edge Technology</li>
+                <li><i class="bx bx-check"></i> 24/7 Customer Support</li>
+                <li><i class="bx bx-check"></i> User-Friendly Interface</li>
+                <li><i class="bx bx-check"></i> Competitive Fees</li>
+                <!-- Add more details here -->
+                <li>
+                  <i class="bx bx-check"></i> Fast and Secure Transactions
+                </li>
+                <li>
+                  <i class="bx bx-check"></i> Diverse Cryptocurrency Portfolio
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features-section" data-section="features" id="overview">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+          <div class="section-content text-center hidden">
+            <h2 class="mb-4" id="con">Key Features</h2>
+            <div class="row">
+              <!-- Feature 1 -->
+              <div class="col-md-4 mb-4">
+                <div class="feature-card">
+                  <i class="fas fa-lock"></i>
+                  <h4 class="mt-3">Secure Transactions</h4>
+                  <p>
+                    Enjoy peace of mind with our top-notch security measures,
+                    ensuring that your transactions are safe and protected.
+                  </p>
+                </div>
+              </div>
+              <!-- Feature 2 -->
+              <div class="col-md-4 mb-4">
+                <div class="feature-card">
+                  <i class="fas fa-chart-line"></i>
+                  <h4 class="mt-3">Real-time Analytics</h4>
+                  <p>
+                    Gain valuable insights with real-time analytics, helping
+                    you make data-driven decisions for your business.
+                  </p>
+                </div>
+              </div>
+              <!-- Feature 3 -->
+              <div class="col-md-4 mb-4">
+                <div class="feature-card">
+                  <i class="fas fa-desktop"></i>
+                  <h4 class="mt-3">User-friendly Interface</h4>
+                  <p>
+                    Our intuitive user interface makes it easy for users of
+                    all levels to navigate and use our platform efficiently.
+                  </p>
+                </div>
+              </div>
+              <!-- Feature 4 -->
+              <div class="col-md-4 mb-4">
+                <div class="feature-card">
+                  <i class="fas fa-headset"></i>
+                  <h4 class="mt-3">24/7 Customer Support</h4>
+                  <p>
+                    We're here for you around the clock. Reach out to our
+                    dedicated support team anytime you need assistance.
+                  </p>
+                </div>
+              </div>
+              <!-- Feature 5 -->
+              <div class="col-md-4 mb-4">
+                <div class="feature-card">
+                  <i class="fas fa-mobile-alt"></i>
+                  <h4 class="mt-3">Mobile App Integration</h4>
+                  <p>
+                    Access our services on the go with our mobile app,
+                    available for both Android and iOS devices.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-hero hero">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-7 text-center heading-section heading-section-white">
+          <span class="subheading">More than 12,000 websites trusted hosted</span>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="row">
+            <div class="col-md-3 d-flex justify-content-center counter-wrap">
+              <div class="block-18 text-center">
+                <div class="text">
+                  <strong class="number" data-number="12000">0</strong>
+                  <span>CMS Installation</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center counter-wrap">
+              <div class="block-18 text-center">
+                <div class="text">
+                  <strong class="number" data-number="9000">0</strong>
+                  <span>Active Users</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center counter-wrap">
+              <div class="block-18 text-center">
+                <div class="text">
+                  <strong class="number" data-number="15000">0</strong>
+                  <span>Registered Users</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center counter-wrap">
+              <div class="block-18 text-center">
+                <div class="text">
+                  <strong class="number" data-number="10000">0</strong>
+                  <span>Satisfied Users</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container mt-5">
+    <h2 class="text-center">Crypto Currency Benefits</h2>
+    <div class="row mt-4">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <div class="card-body text-center">
+            <i class="fas fa-shield-alt fa-3x mb-3"></i>
+            <h4 class="card-title">Security</h4>
+            <p class="card-text">
+              Cryptocurrency transactions are highly secure and use blockchain
+              technology to protect your assets.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <div class="card-body text-center">
+            <i class="fas fa-sitemap fa-3x mb-3"></i>
+            <h4 class="card-title">Decentralization</h4>
+            <p class="card-text">
+              Cryptocurrencies are not controlled by any central authority,
+              providing financial freedom.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <div class="card-body text-center">
+            <i class="fas fa-globe fa-3x mb-3"></i>
+            <h4 class="card-title">Accessibility</h4>
+            <p class="card-text">
+              You can access your cryptocurrency assets from anywhere in the
+              world with an internet connection.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <div class="card-body text-center">
+            <i class="fas fa-dollar-sign fa-3x mb-3"></i>
+            <h4 class="card-title">Low Transaction Fees</h4>
+            <p class="card-text">
+              Cryptocurrency transactions typically have lower fees compared
+              to traditional banking services.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <div class="card-body text-center">
+            <i class="fas fa-globe-americas fa-3x mb-3"></i>
+            <h4 class="card-title">Global Transactions</h4>
+            <p class="card-text">
+              Cryptocurrencies enable quick and borderless transactions with
+              people worldwide.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <div class="card-body text-center">
+            <i class="fas fa-chart-line fa-3x mb-3"></i>
+            <h4 class="card-title">Investment Opportunities</h4>
+            <p class="card-text">
+              Many consider cryptocurrencies as a valuable investment asset
+              with potential for growth.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="services" id="service" data-section="services">
+    <div class="container">
+      <h2 class="text-center mb-4" style="color: #fff">
+        Our Crypto Services
+      </h2>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <!-- Crypto Wallet Service -->
+        <div class="col mb-4">
+          <div class="card hidden">
+            <div class="card-body">
+              <i class="bx bx-wallet"></i>
+              <h5 class="card-title">Crypto Wallet</h5>
+              <p class="card-text">
+                Securely store and manage your cryptocurrencies with our
+                state-of-the-art crypto wallet. Our wallet supports a wide
+                range of digital assets and ensures the safety of your
+                investments.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Trading Insights Service -->
+        <div class="col mb-4">
+          <div class="card hidden">
+            <div class="card-body">
+              <i class="bx bx-line-chart"></i>
+              <h5 class="card-title">Trading Insights</h5>
+              <p class="card-text">
+                Gain valuable trading insights with our data-driven analytics.
+                We provide real-time market data, charts, and analysis to help
+                you make informed decisions in the volatile crypto market.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Fast Transactions Service -->
+        <div class="col mb-4">
+          <div class="card hidden">
+            <div class="card-body">
+              <i class="bx bx-transfer"></i>
+              <h5 class="card-title">Fast Transactions</h5>
+              <p class="card-text">
+                Experience lightning-fast cryptocurrency transactions. Our
+                platform ensures quick and secure transfers, making it easy to
+                send and receive crypto assets.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Continue adding card structures for other services -->
+        <!-- Investment Solutions Service -->
+        <div class="col mb-4">
+          <div class="card hidden">
+            <div class="card-body">
+              <i class="bx bx-coin-stack"></i>
+              <h5 class="card-title">Investment Solutions</h5>
+              <p class="card-text">
+                Explore diverse investment opportunities in the crypto space.
+                We offer tailored solutions for both beginners and experienced
+                investors to help you grow your crypto portfolio.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Security Measures Service -->
+        <div class="col mb-4">
+          <div class="card hidden">
+            <div class="card-body">
+              <i class="bx bx-shield"></i>
+              <h5 class="card-title">Security Measures</h5>
+              <p class="card-text">
+                Your crypto security is our top priority. We implement
+                advanced security measures, including multi-factor
+                authentication and cold storage, to protect your assets from
+                threats.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Customer Support Service -->
+        <div class="col mb-4">
+          <div class="card hidden">
+            <div class="card-body">
+              <i class="bx bx-support"></i>
+              <h5 class="card-title">Customer Support</h5>
+              <p class="card-text">
+                Get dedicated customer support whenever you need it. Our team
+                is available 24/7 to assist you with any crypto-related
+                inquiries or issues you may encounter.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Tracking Service -->
+        <div class="col mb-4">
+          <div class="card hidden">
+            <div class="card-body">
+              <i class="bx bx-bar-chart"></i>
+              <h5 class="card-title">Portfolio Tracking</h5>
+              <p class="card-text">
+                Keep track of your crypto investments effortlessly. Our
+                portfolio tracking tools provide real-time performance data
+                and historical analysis to help you make strategic decisions.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Blockchain Services Service -->
+        <div class="col mb-4">
+          <div class="card hidden">
+            <div class="card-body">
+              <i class="bx bx-network-chart"></i>
+              <h5 class="card-title">Blockchain Services</h5>
+              <p class="card-text">
+                Dive into the world of blockchain with our comprehensive
+                services. We offer blockchain development, smart contract
+                deployment, and decentralized application (dApp) support.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Staking & Rewards Service -->
+        <div class="col mb-4">
+          <div class="card hidden">
+            <div class="card-body">
+              <i class="bx bx-dollar-circle"></i>
+              <h5 class="card-title">Staking & Rewards</h5>
+              <p class="card-text">
+                Earn rewards by participating in crypto staking. Stake your
+                cryptocurrencies with us and receive regular payouts while
+                helping to secure blockchain networks.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Peer-to-Peer Trading Service -->
+        <div class="col mb-4">
+          <div class="card hidden">
+            <div class="card-body">
+              <i class="bx bx-transfer-alt"></i>
+              <h5 class="card-title">Peer-to-Peer Trading</h5>
+              <p class="card-text">
+                Trade cryptocurrencies directly with other users on our
+                peer-to-peer platform. Enjoy decentralized trading with escrow
+                services and a secure environment.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Decentralized Finance (DeFi) Service -->
+        <div class="col mb-4">
+          <div class="card hidden">
+            <div class="card-body">
+              <i class="bx bx-lock-open-alt"></i>
+              <h5 class="card-title">Decentralized Finance (DeFi)</h5>
+              <p class="card-text">
+                Access decentralized financial services with our DeFi
+                solutions. Borrow, lend, and earn interest on your crypto
+                assets without intermediaries.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Historical Data Analysis Service -->
+        <div class="col mb-4">
+          <div class="card hidden">
+            <div class="card-body">
+              <i class="bx bx-history"></i>
+              <h5 class="card-title">Historical Data Analysis</h5>
+              <p class="card-text">
+                Dive deep into historical crypto data. Our platform provides
+                historical price charts and data for in-depth analysis and
+                research.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Payment Integration Service -->
+        <div class="col mb-4">
+          <div class="card hidden">
+            <div class="card-body">
+              <i class="bx bx-credit-card"></i>
+              <h5 class="card-title">Payment Integration</h5>
+              <p class="card-text">
+                Integrate cryptocurrencies into your online business. We offer
+                payment gateway solutions for merchants to accept crypto
+                payments.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Asset Diversification Service -->
+        <div class="col mb-4">
+          <div class="card hidden">
+            <div class="card-body">
+              <i class="bx bx-shuffle"></i>
+              <h5 class="card-title">Asset Diversification</h5>
+              <p class="card-text">
+                Diversify your crypto portfolio effortlessly. We provide
+                investment tools to help you spread your assets across various
+                cryptocurrencies.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Open Source Solutions Service -->
+        <div class="col mb-4">
+          <div class="card hidden">
+            <div class="card-body">
+              <i class="bx bx-lock-open-alt"></i>
+              <h5 class="card-title">Open Source Solutions</h5>
+              <p class="card-text">
+                Explore open-source blockchain solutions. Our platform offers
+                a range of open-source tools and resources for developers and
+                enthusiasts to contribute to the blockchain community.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Cloud-Based Wallet Service -->
+        <div class="col mb-4">
+          <div class="card hidden">
+            <div class="card-body">
+              <i class="bx bx-cloud-upload"></i>
+              <h5 class="card-title">Cloud-Based Wallet</h5>
+              <p class="card-text">
+                Access your crypto assets from anywhere with our cloud-based
+                wallet. Enjoy the convenience of securely managing your
+                digital assets in the cloud with backup and recovery options.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container mt-5">
+    <h2 class="text-center">Trust Seals & Interactive Elements</h2>
+    <div class="row mt-4">
+      <!-- Trust Seal 1 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <i class="fas fa-shield-alt fa-3x mb-3"></i>
+            <h4 class="card-title">Security Guarantee</h4>
+            <p class="card-text">
+              Your data is protected by the latest security measures.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Seal 2 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <i class="fas fa-lock fa-3x mb-3"></i>
+            <h4 class="card-title">Privacy Assurance</h4>
+            <p class="card-text">
+              We respect your privacy and safeguard your information.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Element 1 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <i class="fas fa-comments fa-3x mb-3"></i>
+            <h4 class="card-title">Live Chat Support</h4>
+            <p class="card-text">
+              Chat with our team for immediate assistance.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Element 2 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <i class="fas fa-envelope fa-3x mb-3"></i>
+            <h4 class="card-title">Email Notifications</h4>
+            <p class="card-text">
+              Receive updates and notifications via email.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Element 3 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <i class="fas fa-phone fa-3x mb-3"></i>
+            <h4 class="card-title">Phone Support</h4>
+            <p class="card-text">
+              Call us for personalized assistance and support.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <h2 class="text-center">Frequently Asked Questions</h2>
+    <div class="accordion mt-4" id="faqAccordion">
+      <!-- FAQ Item 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1">
+            <i class="fas fa-question-circle fa-fw mr-3"></i> What is
+            cryptocurrency?
+          </button>
+        </h2>
+        <div id="faqCollapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Cryptocurrency is a digital or virtual form of currency that uses
+            cryptography for security. It operates on a decentralized ledger
+            called blockchain.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading2">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2">
+            <i class="fas fa-question-circle fa-fw mr-3"></i> How can I buy
+            cryptocurrencies?
+          </button>
+        </h2>
+        <div id="faqCollapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            You can buy cryptocurrencies on cryptocurrency exchanges using
+            traditional currency or other cryptocurrencies.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading3">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3">
+            <i class="fas fa-question-circle fa-fw mr-3"></i> Is
+            cryptocurrency safe?
+          </button>
+        </h2>
+        <div id="faqCollapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Cryptocurrency can be safe if you take proper security measures,
+            such as using secure wallets and following best practices.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading4">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4">
+            <i class="fas fa-question-circle fa-fw mr-3"></i> How do I store
+            my cryptocurrency?
+          </button>
+        </h2>
+        <div id="faqCollapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Cryptocurrency can be stored in digital wallets, which can be
+            hardware, software, or paper wallets.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contacts" data-section="contact">
+    <div class="container">
+      <div class="row hidden">
+        <div class="col-lg-6">
+          <div class="contact-form">
+            <h2>Contact Us</h2>
+            <p>
+              If you have any questions or need assistance, please don't
+              hesitate to contact our team.
+            </p>
+            <form action="#" method="POST">
+              <div class="form-group">
+                <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required />
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required />
+              </div>
+              <div class="form-group">
+                <textarea name="message" id="message" rows="4" class="form-control" placeholder="Your Message"
+                  required></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary cta-btn">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="contact-info">
+            <h2>Contact Information</h2>
+            <ul class="list-unstyled">
+              <li>
+                <i class="bx bx-map"></i> 123 Main Street, City, Country
+              </li>
+              <li><i class="bx bx-phone-call"></i> Phone: +1 234 567 890</li>
+              <li>
+                <i class="bx bx-envelope"></i> Email: info@yourwebsite.com
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials-section" id="reports" data-section="testimonials">
+    <div class="container">
+      <div class="section-contents hidden">
+        <h2 class="text-center mb-4">What Our Users Say</h2>
+        <div class="row">
+          <!-- Testimonial 1 -->
+          <div class="col-md-4">
+            <div class="testimonial">
+              <div class="testimonial-avatar">
+                <img src="/image/person-1.jpg" alt="User 1" />
+              </div>
+              <div class="testimonial-text">
+                <p>
+                  "I am amazed by the excellent service provided by
+                  Cryptocurrency. Their platform is user-friendly and secure.
+                  I've had a great experience!"
+                </p>
+                <p id="testimonial-author">- Sarah Johnson</p>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="col-md-4">
+            <div class="testimonial">
+              <div class="testimonial-avatar">
+                <img src="/image/person-2.jpg" alt="User 2" />
+              </div>
+              <div class="testimonial-text">
+                <p>
+                  "Cryptocurrency has simplified my financial transactions.
+                  Real-time analytics help me make informed decisions. Highly
+                  recommended!"
+                </p>
+                <p id="testimonial-author">- Michael Anderson</p>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="col-md-4">
+            <div class="testimonial">
+              <div class="testimonial-avatar">
+                <img src="/image/person-3.jpg" alt="User 3" />
+              </div>
+              <div class="testimonial-text">
+                <p>
+                  "I've been using Cryptocurrency for years, and their 24/7
+                  customer support is outstanding. They are always ready to
+                  assist."
+                </p>
+                <p id="testimonial-author">- Emily Davis</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="footer-content hidden">
+            <p>
+              &copy; <span id="currentYear"></span> Cryptocurrency. All rights
+              reserved.
+            </p>
+
+            <div class="footer-social">
+              <a href="#"><i class="bx bxl-twitter"></i></a>
+              <a href="#"><i class="bx bxl-facebook"></i></a>
+              <a href="#"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-Top Button -->
+
+  <button id="scrollTopButton" title="Go to top">
+    <i class="bx bx-chevron-up"></i>
+  </button>
+  <script>
+    // Get the button element
+    var scrollTopButton = document.getElementById("scrollTopButton");
+
+    // Show the button when the user scrolls down 20px from the top of the document
+    window.onscroll = function () {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        scrollTopButton.style.display = "block";
+      } else {
+        scrollTopButton.style.display = "none";
+      }
+    };
+
+    // Scroll to the top of the document when the button is clicked
+    scrollTopButton.addEventListener("click", function () {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+    });
+  </script>
+
+  <!-- Bootstrap JS and jQuery scripts (Make sure to include them) -->
+  <script src="/js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

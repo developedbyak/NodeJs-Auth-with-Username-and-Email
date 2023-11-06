@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/form.css" />
+  </head>
+  <body>
+    <div class="container control-center">
+      <div class="row">
+        <div class="col-md-6 form-control-center">
+          <form
+            id="registration-form"
+            action="/register"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <% if (messages.error) { %>
+            <div class="alert alert-primary" role="alert">
+              <strong><%= messages.error %></strong>
+            </div>
+            <% } %>
+            <div class="form-group">
+              <label
+                for="profile-picture"
+                style="cursor: pointer"
+                class="icon-label"
+              >
+                Profile Picture <i class="fas fa-image"></i>
+              </label>
+              <input
+                type="file"
+                class="form-control"
+                id="profile-picture"
+                name="profileImage"
+                style="display: none"
+              />
+              <img id="image-preview" src="#" alt="Image Preview" />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder="Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                name="username"
+                placeholder="Username"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <button type="submit" class="btn text-white">Register</button>
+          </form>
+        </div>
+        <div class="col-md-6 left-side">
+          <div class="toggle">
+            <div class="panel">
+              <h1>Welcome Back!</h1>
+              <p>Enter your personal details to use all of site features</p>
+              <a href="/login" class="btn text-white">Sign in</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Image preview functionality
+      const profilePicture = document.getElementById("profile-picture");
+      const imagePreview = document.getElementById("image-preview");
+
+      profilePicture.addEventListener("change", function () {
+        const file = profilePicture.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            imagePreview.src = e.target.result;
+            imagePreview.style.display = "block";
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+    </script>
+  </body>
+</html>
